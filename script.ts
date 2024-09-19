@@ -81,10 +81,62 @@ async function searchPlayer(player: Player): Promise<Player[]> {
     }
 }
 
+function createSpan() {
+    return document.createElement('span');
+}
+
+function createbox(player: Player) {
+
+    const playerBox = document.createElement('div');
+    playerBox.id = 'playerBox';
+    const playerName = createSpan()
+    playerName.innerText = player.playerName || 'name undefined';
+    playerBox.appendChild(playerName);
+    const playerThreeP = createSpan()
+    playerThreeP.innerText = player.threePercent.toString();
+    playerBox.appendChild(playerThreeP);
+    const playerTwoP = createSpan()
+    playerTwoP.innerText = player.twoPercent.toString();
+    playerBox.appendChild(playerTwoP);
+    const playerPoints = createSpan();
+    playerPoints.innerText = player.points.toString();
+    playerBox.appendChild(playerPoints);
+    return playerBox
+}
+
+function isNotPlayer(team: HTMLDivElement) {
+    const nodeContent = team.childNodes.length;
+    return nodeContent < 4;
+}
+
+function insertPlayer(player: Player, team: HTMLDivElement) {
+    if (isNotPlayer(team)){
+        team.appendChild(createbox(player));
+    }
+    else alert("There is already a player")
+}
+
 function addPlayer(player: Player) {
     switch (player.position){
         case 'PG':{
-
+            insertPlayer(player, teamPG)
+            break;
+        }
+        case 'SG':{
+            insertPlayer(player, teamSG)
+            break;
+        }
+        case 'SF':{
+            insertPlayer(player, teamSF)
+            break;
+        }
+        case 'PF':{
+            insertPlayer(player, teamPF)
+            break;
+        }
+        case 'C':{
+            insertPlayer(player, teamC)
+            break;
         }
 
     }
