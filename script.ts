@@ -93,13 +93,13 @@ function createbox(player: Player) {
     playerName.innerText = player.playerName || 'name undefined';
     playerBox.appendChild(playerName);
     const playerThreeP = createSpan()
-    playerThreeP.innerText = player.threePercent.toString();
+    playerThreeP.innerText = `Three Precents: ${player.threePercent.toString()}%`;
     playerBox.appendChild(playerThreeP);
     const playerTwoP = createSpan()
-    playerTwoP.innerText = player.twoPercent.toString();
+    playerTwoP.innerText = `Two Precents: ${player.twoPercent.toString()}%`;
     playerBox.appendChild(playerTwoP);
     const playerPoints = createSpan();
-    playerPoints.innerText = player.points.toString();
+    playerPoints.innerText = `Points: ${player.points.toString()}`;
     playerBox.appendChild(playerPoints);
     return playerBox
 }
