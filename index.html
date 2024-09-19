@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>NBA FANTASY 2014-2024</title>
+</head>
+<body>
+<header>
+    NBA FANTASY 2014-2024
+</header>
+<main>
+    <h1>My Fantasy Team</h1>
+    <div id="team">
+        <div class="teamPlayer" id="teamPG">
+            <h3>Point Guard</h3>
+        </div>
+        <div class="teamPlayer" id="teamSG">
+            <h3>Shooting Guard</h3>
+        </div>
+        <div class="teamPlayer" id="teamSF">
+            <h3>Small Forward</h3>
+        </div>
+        <div class="teamPlayer" id="teamPF">
+            <h3>Power Forward</h3>
+        </div>
+        <div class="teamPlayer" id="teamC">
+            <h3>Center</h3>
+        </div>
+    </div>
+    <h1>NBA Player Search</h1>
+    <div id="searchBox">
+    <form>
+        <select id="selectPlayers">
+            <option>PG</option>
+            <option>SG</option>
+            <option>SF</option>
+            <option>PF</option>
+            <option>C</option>
+        </select>
+        <div class="rangeContainerPoints">
+            <span class="rangeValue" id="rangePointsValue"></span>
+            <input type="range" min="0" max="20000" value="0" class="rangeInput" id="pointsRange">
+        </div>
+        <div class="rangeContainerFieldGoal">
+            <span class="rangeValue" id="rangeFieldValue"></span>
+            <input type="range" min="0" max="100" value="0" class="rangeInput" id="fieldGoalRange">
+        </div>
+        <div class="rangeContainer3-Point">
+            <span class="rangeValue" id="range3PointValue"></span>
+            <input type="range" min="0" max="100" value="0" class="rangeInput" id="Point3Range">
+        </div>
+        <button type="submit" id="searchBtn">Search Player</button>
+    </form>
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    Player
+                </th>
+                <th>
+                    Position
+                </th>
+                <th>
+                    Points
+                </th>
+                <th>
+                    FG%
+                </th>
+                <th>
+                    3P%
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</main>
+<script src="dist/script.js"></script>
+</body>
+</html>
